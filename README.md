@@ -1,7 +1,3 @@
----
-description: Developer Primer Parking Lot For Dynamo v2.13
----
-
 # About
 
 ## Developer Primer Parking Lot
