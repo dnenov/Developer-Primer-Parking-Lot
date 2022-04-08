@@ -1,13 +1,16 @@
+---
+description: Developer Primer Parking Lot For Dynamo v2.13
+---
+
 # About
 
-## Developer Primer Parking Lot For Dynamo v2.13
+## Developer Primer Parking Lot
 
 ![Dynamo Logo](images/dynamo\_logo\_dark-trim.jpg)
 
 > This is a temporary repository for the Developer section of the Dynamo Primer
 
-You can find the latest Primer here: https://github.com/dnenov/DynamoPrimerNew/blob/master/README.md
-
+You can find the latest Primer here: [https://github.com/dnenov/DynamoPrimerNew/blob/master/README.md](https://github.com/dnenov/DynamoPrimerNew/blob/master/README.md)
 
 ### License
 
