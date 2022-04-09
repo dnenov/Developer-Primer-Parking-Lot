@@ -59,7 +59,7 @@ As mentioned previously, the primary aspect that makes a NodeModel node differen
 
 Copy the following code into the `GridNodeModel.cs`.
 
-```
+```csharp
 using System;
 using System.Collections.Generic;
 using Dynamo.Graph.Nodes;
@@ -134,7 +134,7 @@ The `CustomNodeModelFunction` project will be built into a separate assembly fro
 
 Copy the following code into `GridFunction.cs`.
 
-```
+```csharp
 using Autodesk.DesignScript.Geometry;
 using Autodesk.DesignScript.Runtime;
 using System;
@@ -202,7 +202,7 @@ To create a slider, we need to customize the UI by implementing the `INodeViewCu
 
 Copy the following code into `GridNodeView.cs`
 
-```
+```csharp
 using Dynamo.Controls;
 using Dynamo.Wpf;
 
@@ -235,7 +235,7 @@ After the structure of the project is set up, use Visual Studio's design environ
 
 Copy the following code into `Slider.xaml`
 
-```
+```xml
 <UserControl x:Class="CustomNodeModel.CustomNodeModel.Slider"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -255,7 +255,7 @@ Copy the following code into `Slider.xaml`
 
 When we created the `Slider.xaml` file, Visual Studio automatically created a C# file called `Slider.xaml.cs` that initializes the slider. Change the namespace in this file.
 
-```
+```csharp
 using System.Windows.Controls;
 
 namespace CustomNodeModel.CustomNodeModel
@@ -264,7 +264,7 @@ namespace CustomNodeModel.CustomNodeModel
     /// Interaction logic for Slider.xaml
     /// </summary>
     public partial class Slider : UserControl
-    {
+    {json
         public Slider()
         {
             InitializeComponent();
@@ -289,7 +289,7 @@ Before we build the project, the final step is to add a `pkg.json` file so that 
 
 * Copy the following code into `pkg.json`
 
-```
+```json
 {
   "license": "MIT",
   "file_hash": null,
