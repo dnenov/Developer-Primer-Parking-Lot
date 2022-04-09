@@ -157,7 +157,7 @@ The other common use case that is affected by the 2.0 API changes relates to the
 
 Let's walk through upgrading a 1.3 UI node to Dynamo 2.x.
 
-```
+```csharp
 using System;
 using System.Collections.Generic;
 using Dynamo.Graph.Nodes;
@@ -235,7 +235,7 @@ This example adds the minimal loading JSON constructor possible. But what if we 
 
 Here is a more complex constructor for a UI node:
 
-```
+```csharp
  public ButtonCustomNodeModel()
         {
             // When you create a UI node, you need to do the
@@ -276,7 +276,7 @@ Here is a more complex constructor for a UI node:
 
 When we add a JSON constructor for loading this node from a file we have to recreate some of this logic, but note that we do not include the code that creates ports, sets lacing, or sets the default values for properties which we can load from the file.
 
-```
+```csharp
         // This constructor is called when opening a Json graph.
 
         [JsonConstructor]
