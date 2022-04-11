@@ -8,7 +8,7 @@ Dynamo is a visual programming platform that enables designers to define the rel
 
 The purpose of this guide is to help you navigate the range of C# development possibilities for Dynamo from how to create zero-touch nodes to building extensions.
 
-> The Dynamo source on Github
+![The Dynamo source on GitHub](.gitbook/assets/dynamogithub.jpg)
 
 The strength of Dynamo as an ever-growing platform is a product of the incredible community of users contributing to its development. Become an active part of this conversation by following [the Blog](http://dynamobim.org/blog/), providing original content to [the Gallery](http://dynamobim.org/gallery/), or engaging others in [the Forum](https://forum.dynamobim.com).
 
@@ -57,9 +57,3 @@ If you are looking for a guide to visual programming in Dynamo, please visit the
 #### How can I suggest changes to this guide? <a href="#how-can-i-suggest-changes-to-this-guide" id="how-can-i-suggest-changes-to-this-guide"></a>
 
 This documentation is open to suggestions. These can be made directly in Gitbook by creating change requests.
-
-### results matching ""
-
-*
-
-### No results matching ""
