@@ -17,5 +17,5 @@
 * [Publish a Package](publish-a-package/README.md)
   * [Build a Package From Visual Studio](publish-a-package/build-a-package-from-visual-studio.md)
   * [Extensions as Packages](publish-a-package/extensions-as-packages.md)
-* [Examples](examples.md)
-* [GitBook](gitbook.md)
+* [Pull Requests](pull-requests.md)
+* [Examples](gitbook.md)
