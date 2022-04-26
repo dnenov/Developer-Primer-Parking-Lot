@@ -21,6 +21,8 @@ The code for the DynamoRevit project lives in a separate repository on Github fr
 
 DynamoRevit's source is hosted here: [https://github.com/DynamoDS/DynamoRevit](https://github.com/DynamoDS/DynamoRevit)
 
+![](../.gitbook/assets/github-dynamorevit\_.jpg)
+
 > 1. Clone or download the repository
 > 2. DynamoRevit's branches reference Revit versions
 
@@ -32,15 +34,21 @@ In a similar process to pulling the Dynamo repository we will use the git clone 
 
 > Replace `username` with your username
 
+![](<../.gitbook/assets/cli-cd-revit (1).jpg>)
+
 We can now clone the repository into this directory. Though we will need to specify a branch of the repository, we can switch to this branch after cloning.
 
 `git clone https://github.com/DynamoDS/DynamoRevit.git` clones the repository from a remote URL and by default switches to the master branch.
+
+![](../.gitbook/assets/cli-clone-revit.jpg)
 
 Once the repository has finished cloning, change the current directory to the repository folder and switch to the branch that matches the installed version of Revit. For this example, we are using Revit 2018. All remote branches can be viewed on the Github page in the Branch drop-down menu.
 
 `cd C:\Users\username\Documents\GitHub\DynamoRevit` changes the directory to DynamoRevit.\
 `git checkout Revit2018` sets the current branch to `Revit2018`.\
 `git branch` verifies which branch we are on and shows the others that exist locally.
+
+![](<../.gitbook/assets/cli-branch-revit (1).jpg>)
 
 > The branch with an asterisk is the one currently checked out. The `Revit2017` branch is showing because we previously checked it out, so it exists locally.
 
@@ -50,13 +58,19 @@ It is important to choose the correct branch of the repository to ensure that wh
 
 Before building the repository, we will need to restore the NuGet packages with the `restorepackages.bat` file located in the `src` folder. This bat file uses the [nuget](https://www.nuget.org) package manager to pull built binaries of dynamo core, which DynamoRevit needs. You might also choose to build these manually, but if you are only making changes to DynamoRevit and not Dynamo core. this makes getting started faster. Make sure to run this file as an admin.
 
+![](../.gitbook/assets/fe-restorepackages.jpg)
+
 > 1. Right-click `restorepackages.bat` and select `Run as administrator`
 
 If the packages are successfully restored, a `packages` folder will be added to the `src` folder with the latest beta NuGet packages.
 
+![](../.gitbook/assets/fe-packages.jpg)
+
 > 1. The latest beta Dynamo NuGet packages
 
 With the packages restored, open the `Dynamo.Revit.2013.sln` Visual Studio solution file in `src` and build the solution. The build may initially have trouble finding `AssemblySharedInfo.cs`. If so, rerunning the build will resolve this issue.
+
+![](../.gitbook/assets/vs-build-dynamorevit.jpg)
 
 > 1. Select `Build > Build Solution`
 > 2. Verify that the build was successful in the Output window. A message should read `===== Build: 13 succeeded, 0 failed, 0 up-to-date, 0 skipped =====`.
@@ -120,6 +134,8 @@ The code should look like this:
 > We cloned and built Dynamo right before this walk-through to ensure that it will work well with DynamoRevit. The directory path points to this build.
 
 Now when we open Revit, there should be a Dynamo add-in located in the Manage tab.
+
+![](../.gitbook/assets/revit-dynamo.jpg)
 
 > 1. Select `Manage`
 > 2. Click the Dynamo add-in icon
@@ -187,6 +203,8 @@ This process is nearly identical to pulling changes for Dynamo, except that we w
 `git pull origin Revit2017` pulls changes from the remote origin `Revit2017` branch.
 
 Origin simply points to the original url we cloned.
+
+![](../.gitbook/assets/cli-pull-revit.jpg)
 
 > We want to be mindful here of which branch we are currently on and which one we are pulling from to avoid pulling changes from `Revit2018` into `Revit2017` for example.
 

@@ -8,6 +8,8 @@ Github is a hosting service based on [git](https://help.github.com/articles/git-
 
 Dynamo's source is hosted on the DynamoDS Github in this repository: [https://github.com/DynamoDS/Dynamo](https://github.com/DynamoDS/Dynamo)
 
+![](../.gitbook/assets/github.jpg)
+
 > The Dynamo source files.
 >
 > 1. Clone or download the entire repository
@@ -21,6 +23,8 @@ Before we can clone the repository, we need to install git. Follow this [short g
 
 We need a URL for the Dynamo repository to clone from. This can be found in the "Clone or download" button on the repository page. Copy the URL to paste into command prompt.
 
+![](../.gitbook/assets/github-clone.jpg)
+
 > 1. Select "Clone or download"
 > 2. Copy the URL
 
@@ -30,11 +34,17 @@ With git installed, we can clone the Dynamo repository. Start by opening command
 
 > Replace "username" with your user name
 
+![](../.gitbook/assets/cli-1.jpg)
+
 In the next step we will run a git command to clone the Dynamo repository to the location we specified. The URL in the command is obtained by clicking on the "Clone or Download" button on Github. Run this command in the command terminal. Note that this will clone the Dynamo repo master branch which is most updated code for Dynamo, and will contain to the latest version of Dynamo code. This branch changes daily.
 
 `git clone https://github.com/DynamoDS/Dynamo.git`
 
+![](../.gitbook/assets/cli-2.jpg)
+
 We know git is working if the cloning operation completed successfully. In the file explorer, navigate to the directory where you cloned to see the source files. the directory structure should look identical to the Dynamo repository's master branch on Github.
+
+![](../.gitbook/assets/source-files.jpg)
 
 > 1. Dynamo's source files
 > 2. Git files
@@ -51,6 +61,8 @@ With the source files now cloned to our local machine, we can build an executabl
 
 Once everything is finished installing, we can start Visual Studio and open the `Dynamo.All.sln` solution located in `Dynamo\src`.
 
+![](../.gitbook/assets/vs-open-dynamo.jpg)
+
 > 1. Select `File > Open > Project/Solution`
 > 2. Browse to the Dynamo repository and open the `src` folder
 > 3. Select the `Dynamo.All.sln` solution file
@@ -58,12 +70,16 @@ Once everything is finished installing, we can start Visual Studio and open the 
 
 Before we can build the solution, a few settings should be specified. We should first build a debug version of Dynamo so visual studio can gather more information while debugging to help us develop, and we want to target AnyCPU.
 
+![](../.gitbook/assets/vs-dynamo-build-settings.jpg)
+
 > These will become folders inside the `bin` folder
 >
 > 1. For this example we chose `Debug` as the Solution Configuration
 > 2. Set the Solution Platform to `Any CPU`
 
 With the project open, we can build the solution. This process will create a DynamoSandbox.exe file that we can run.
+
+![](../.gitbook/assets/vs-build-dynamo.jpg)
 
 > Building the project will restore NuGet dependencies.
 >
@@ -73,6 +89,8 @@ With the project open, we can build the solution. This process will create a Dyn
 #### Running a local build <a href="#running-a-local-build" id="running-a-local-build"></a>
 
 If Dynamo builds successfully, a `bin` folder will be created in the Dynamo repository with the DynamoSandbox.exe file. In our case, we're building with the Debug option, so the executable file is located in `bin\AnyCPU\Debug`. Running this will open a local build of Dynamo.
+
+![](../.gitbook/assets/ex-dynamosandbox.jpg)
 
 > 1. The DynamoSandbox executable we just built. Run this to start Dynamo.
 
@@ -91,6 +109,8 @@ For the standalone Dynamo application, DynamoSandbox, we will cover two options 
 
 Starting Dynamo from Visual Studio rebuilds the solution for every debugging session if required, so if we made changes to the source they will be incorporated when debugging. With the `Dynamo.All.sln` solution still open, select `Debug`, `AnyCPU`, and `DynamoSandbox` from the drop-down menus and then click `Start`. This will build Dynamo and start a new process (DynamoSandbox.exe), and attach Visual Studio's debugger to it.
 
+![](../.gitbook/assets/vs-debug-options.jpg)
+
 > Build and start the application directly from Visual Studio
 >
 > 1. Set configuration to `Debug`
@@ -100,6 +120,8 @@ Starting Dynamo from Visual Studio rebuilds the solution for every debugging ses
 
 Alternatively, we may want to debug a Dynamo process that is already running to troubleshoot an issue with a specific graph open or package. For this purpose, we would open the project's source files in Visual Studio and attach to a running Dynamo process using the `Attach to Process` debug menu item.
 
+![](../.gitbook/assets/vs-attach-dynamosandbox.jpg)
+
 > Attach a running process to Visual Studio
 >
 > 1. Select `Debug > Attach to Process...`
@@ -107,6 +129,8 @@ Alternatively, we may want to debug a Dynamo process that is already running to 
 > 3. Select `Attach`
 
 In both situations we are attaching the debugger to a process we wish to debug. We can set break points in the code before or after starting the debugger that will cause the process to pause immediately before executing that line of code. If an uncaught exception is thrown while debugging, Visual Studio will jump to where it occurred in the source code. This is an efficient method for finding simple crashes, unhandled exceptions, and to understand the execution flow of an application.
+
+![](../.gitbook/assets/vs-debug-dynamocore.jpg)
 
 > While debugging DynamoSandbox, we set a breakpoint in the Color.ByARGB node's constructor that causes the Dynamo process to pause when the node is instantiated. If this node was throwing an exception or causing Dynamo to crash, we could step through each line in the constructor to find where the issue was occurring.
 >
@@ -128,6 +152,8 @@ Using the command line, set the current directory to the Dynamo repository:
 Use the following command to pull the latest changes:
 
 `git pull origin master`
+
+![](../.gitbook/assets/cli-pull-changes.jpg)
 
 > 1. Here we can see that the local repository has been updated with changes from the remote.
 

@@ -29,6 +29,8 @@ Extension authors may also have some potential changes to make - depending on ho
 
 The common root cause is because the node was created using a constructor that recreated the ports. Instead a constructor which loaded the ports should have been used. These constructors are usually marked `[JsonConstructor]` _see below for examples_
 
+![](<../.gitbook/assets/broken json.jpg>)
+
 This can occur because:
 
 * There was simply no matching `[JsonConstructor]`, or it was not passed the `Inports` and `Outports` from the JSON .dyn.

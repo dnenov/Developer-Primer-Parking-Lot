@@ -2,6 +2,8 @@
 
 NodeModel based nodes provides significantly more flexibility and power than the Zero-Touch nodes. In this example, we will take the Zero-Touch grid node to the next level by adding an integrated slider that randomizes the rectangle size.
 
+![](<../.gitbook/assets/cover-image (1).jpg>)
+
 > The slider scales the cells relative to their size so the user doesn't have to provide a slider with the correct range.
 
 #### The Model-View-Viewmodel Pattern <a href="#the-model-view-viewmodel-pattern" id="the-model-view-viewmodel-pattern"></a>
@@ -31,6 +33,8 @@ A NodeModel node can only call functions, so we need to separate the NodeModel a
 
 Create two C# class library projects in the solution: one for functions and one to implement the NodeModel interface.
 
+![](../.gitbook/assets/vs-new-class-projects.jpg)
+
 > 1. Right-click on the Solution and select `Add > New Project`
 > 2. Choose Class Library
 > 3. Name it `CustomNodeModel`
@@ -39,16 +43,22 @@ Create two C# class library projects in the solution: one for functions and one 
 
 Next, we need to rename the class libraries that were automatically created and add one to the `CustomNodeModel` project. The class `GridNodeModel` implements the abstract NodeModel class, `GridNodeView` is used to customize the view, and `GridFunction` contains any functions we need to call.
 
+![](../.gitbook/assets/vs-new-class.jpg)
+
 > 1. Add another class by right-clicking on the `CustomNodeModel` project, selecting `Add > New Item...` and choose `Class`.
 > 2. In the `CustomNodeModel` project, we need `GridNodeModel.cs` and `GridNodeView.cs` class
 > 3. In the `CustomNodeModelFunction` project, we need a `GridFunctions.cs` class
 
 Before we add any code to the classes, add the necessary packages for this project. `CustomNodeModel` will need ZeroTouchLibrary and WpfUILibrary, and `CustomNodeModelFunction` will only need ZeroTouchLibrary. The WpfUILibrary will be used in the UI customization we do later on, and ZeroTouchLibrary will be used for creating geometry. Packages can be added individually for projects. Since these packages have dependencies, Core and DynamoServices will be automatically installed.
 
+![](../.gitbook/assets/vs-add-packages.jpg)
+
 > 1. Right-click on a project and select `Manage NuGet Packages`
 > 2. Install only the required packages for that project
 
 Visual Studio will copy the NuGet packages we referenced to the build directory. This can be set to false so we don't have any unnecessary files in the package.
+
+![](../.gitbook/assets/vs-disable-package-copying.jpg)
 
 > 1. Select Dynamo NuGet Packages
 > 2. Set `Copy Local` to false
@@ -189,6 +199,8 @@ This function class is very similar to the Zero-Touch Grid case study with one d
 
 Just as we added references for NuGet packages, `CustomNodeModel` will need to reference `CustomNodeModelFunction` to call the function.
 
+![](../.gitbook/assets/vs-add-project-reference.jpg)
+
 > The using statement for CustomNodeModel will be inactive until we reference the function
 >
 > 1. Right-click on `CustomNodeModel` and select `Add > Reference`
@@ -227,6 +239,8 @@ namespace CustomNodeModel.CustomNodeModel
 * `public class CustomNodeModelView : INodeViewCustomization<GridNodeModel>` defines the necessary functions to customize the UI.
 
 After the structure of the project is set up, use Visual Studio's design environment to build a user control and define its parameters in an `.xaml` file. From the tool box, add a slider to `<Grid>...</Grid>`.
+
+![](../.gitbook/assets/vs-usercontrol.jpg)
 
 > 1. Right click on `CustomNodeModel` and select `Add > New Item`
 > 2. Select `WPF`
@@ -280,6 +294,8 @@ The `GridNodeModel.cs`, defines the slider computation logic.
 **5. Configure as a package**
 
 Before we build the project, the final step is to add a `pkg.json` file so that Dynamo can read the package.
+
+![](../.gitbook/assets/vs-pkg-json.jpg)
 
 > 1. Right-click on `CustomNodeModel` and select `Add > New Item`
 > 2. Select `Web`

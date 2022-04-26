@@ -2,7 +2,7 @@
 
 Dynamo is a visual programming platform that enables designers to define the relationships and the sequences of actions that compose custom algorithms. Dynamo is an open-source project on Github, giving everyone an opportunity to contribute to its development.
 
-> A visual program in Dynamo
+![A visual program in Dynamo](.gitbook/assets/01-ProgramFlow.png)
 
 #### What is the purpose of this guide? <a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 
@@ -12,13 +12,15 @@ The purpose of this guide is to help you navigate the range of C# development po
 
 The strength of Dynamo as an ever-growing platform is a product of the incredible community of users contributing to its development. Become an active part of this conversation by following [the Blog](http://dynamobim.org/blog/), providing original content to [the Gallery](http://dynamobim.org/gallery/), or engaging others in [the Forum](https://forum.dynamobim.com).
 
-> The Dynamo Forum
+#### The Community
 
-#### Looking for an introduction to Dynamo? <a href="#looking-for-an-introduction-to-dynamo" id="looking-for-an-introduction-to-dynamo"></a>
+![The Dynamo Forum](.gitbook/assets/forum.jpg)
+
+#### Looking for an introduction to Dynamo?
 
 If you are looking for a guide to visual programming in Dynamo, please visit the [Dynamo Primer](http://dynamoprimer.com/en/). This invaluable resource covers the foundational concepts of visual programming in Dynamo and development options in the Dynamo workspace such as DesignScript, Python, and Zero-Touch.
 
-> The Dynamo Primer
+![The Dynamo Primer](<.gitbook/assets/primer (1).jpg>)
 
 #### What additional online resources do we provide? <a href="#what-additional-online-resources-do-we-provide" id="what-additional-online-resources-do-we-provide"></a>
 

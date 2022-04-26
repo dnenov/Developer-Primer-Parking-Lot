@@ -12,6 +12,8 @@ In the browser, search for packages and view statistics: [http://dynamopackages.
 
 * In Dynamo, the Package Manager includes install, publish, and update packages.
 
+![](../.gitbook/assets/dynamopackagemanager.jpg)
+
 > 1. Search for packages online: `Packages > Search for a Package...`
 > 2. View/edit installed packages: `Packages > Manage Packages...`
 > 3. Publish a new package: `Packages > Publish New Package...`
@@ -22,11 +24,15 @@ Packages are published from Package Manager within Dynamo. The recommended proce
 
 Start Dynamo and select `Packages > Publish New Package...` to open the `Publish a Package` window.
 
+![](../.gitbook/assets/dyn-publish-package-add-files.jpg)
+
 > 1. Select `Add file...` to browse for files to add to the package
 > 2. Select the two `.dll` files from the NodeModel Case Study
 > 3. Select `Ok`
 
 With the files added to the package contents, give the package a name, description, and version. Publishing a package using Dynamo automatically creates a `pkg.json` file.
+
+![](../.gitbook/assets/dyn-publish-package.jpg)
 
 > A package ready to be published.
 >
@@ -34,6 +40,8 @@ With the files added to the package contents, give the package a name, descripti
 > 2. Publish by clicking "Publish Locally" and select Dynamo's package folder: `AppData\Roaming\Dynamo\Dynamo Core\1.3\packages` to have the node available in Core. Always publish locally until the package is ready to share.
 
 After publishing a package, the nodes will be available in the Dynamo Library under the category`CustomNodeModel`.
+
+![](<../.gitbook/assets/dyn-publish-package-library (1).jpg>)
 
 > 1. The package we just created in the Dynamo Library
 
@@ -47,6 +55,8 @@ Once the package is ready to publish online, open the Package Manager and choose
 
 Updating a package is a similar process to publishing. Open the Package Manager and select `Publish Version...` on the package that needs to be updated and enter a higher version.
 
+![](../.gitbook/assets/dyn-publish-package-version.jpg)
+
 > 1. Select `Publish Version` to update an existing package with new files in the root directory, then choose whether it should be published locally or online.
 
 #### Package Manager web client <a href="#package-manager-web-client" id="package-manager-web-client"></a>
@@ -54,6 +64,8 @@ Updating a package is a similar process to publishing. Open the Package Manager 
 The Package Manager web client is used exclusively for searching and viewing package data such as versioning and download statistics.
 
 The Package Manager web client can be accessed at this link: [http://dynamopackages.com/](http://dynamopackages.com)
+
+![](<../.gitbook/assets/packagemanager-browser (1).jpg>)
 
 ### results matching ""
 
