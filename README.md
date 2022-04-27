@@ -2,7 +2,9 @@
 
 ## Developer Primer Parking Lot
 
-![Dynamo Logo](images/dynamo\_logo\_dark-trim.jpg)
+
+
+![](.gitbook/assets/dynamo-logo-dark-trim.jpg)
 
 > This is a temporary repository for the Developer section of the Dynamo Primer
 
