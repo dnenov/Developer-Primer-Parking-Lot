@@ -8,6 +8,8 @@ The Revit Test Framework (RTF) allows for remote testing on Revit. RTF creates a
 
 The Revit Test Framework is open source and hosted on Github: [https://github.com/DynamoDS/RevitTestFramework](https://github.com/DynamoDS/RevitTestFramework)
 
+![](../.gitbook/assets/rft-github.jpg)
+
 Using the same git commands from the walk-through in Build DynamoRevit From Source, we can clone and build the repository to run RTF. Open a new command prompt and enter the following commands:
 
 * `cd "C:\Users\username\Documents\GitHub"` to set the directory into which the repository will be cloned
@@ -23,6 +25,8 @@ Once the repository is cloned, open the solution file in Visual Studio and build
 #### How to run a test for DynamoRevit in the GUI <a href="#how-to-run-a-test-for-dynamorevit-in-the-gui" id="how-to-run-a-test-for-dynamorevit-in-the-gui"></a>
 
 Tests are run in the RevitTestFramework by specifying an assembly containing the tests and any supporting references. We can start by running a test that comes with the DynamoRevit repository in the GUI application. Start by opening the `RevitTestFrameworkGUI.exe` application in the `bin` folder of the build.
+
+![](../.gitbook/assets/fail.jpg)
 
 > RTF loads a default test from its `bin` folder when it starts
 >
