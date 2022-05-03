@@ -49,8 +49,4 @@ To verify your package has been successfully uploaded you should be able to sear
 
 ![](<../.gitbook/assets/ViewExtension\_Search (1).jpg>)
 
-### results matching ""
-
 *
-
-### No results matching ""

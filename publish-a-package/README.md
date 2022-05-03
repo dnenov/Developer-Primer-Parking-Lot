@@ -24,7 +24,7 @@ Packages are published from Package Manager within Dynamo. The recommended proce
 
 Start Dynamo and select `Packages > Publish New Package...` to open the `Publish a Package` window.
 
-![](../.gitbook/assets/dyn-publish-package-add-files.jpg)
+![](<../.gitbook/assets/dyn-publish-package-add-files (1).jpg>)
 
 > 1. Select `Add file...` to browse for files to add to the package
 > 2. Select the two `.dll` files from the NodeModel Case Study
@@ -32,7 +32,7 @@ Start Dynamo and select `Packages > Publish New Package...` to open the `Publish
 
 With the files added to the package contents, give the package a name, description, and version. Publishing a package using Dynamo automatically creates a `pkg.json` file.
 
-![](../.gitbook/assets/dyn-publish-package.jpg)
+![](<../.gitbook/assets/dyn-publish-package (2).jpg>)
 
 > A package ready to be published.
 >
@@ -41,7 +41,7 @@ With the files added to the package contents, give the package a name, descripti
 
 After publishing a package, the nodes will be available in the Dynamo Library under the category`CustomNodeModel`.
 
-![](<../.gitbook/assets/dyn-publish-package-library (1).jpg>)
+![](../.gitbook/assets/dyn-publish-package-library.jpg)
 
 > 1. The package we just created in the Dynamo Library
 
@@ -55,7 +55,7 @@ Once the package is ready to publish online, open the Package Manager and choose
 
 Updating a package is a similar process to publishing. Open the Package Manager and select `Publish Version...` on the package that needs to be updated and enter a higher version.
 
-![](../.gitbook/assets/dyn-publish-package-version.jpg)
+![](<../.gitbook/assets/dyn-publish-package-version (1).jpg>)
 
 > 1. Select `Publish Version` to update an existing package with new files in the root directory, then choose whether it should be published locally or online.
 
@@ -67,8 +67,4 @@ The Package Manager web client can be accessed at this link: [http://dynamopacka
 
 ![](<../.gitbook/assets/packagemanager-browser (1).jpg>)
 
-### results matching ""
-
 *
-
-### No results matching ""

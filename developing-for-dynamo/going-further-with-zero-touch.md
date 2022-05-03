@@ -38,7 +38,7 @@ namespace ZeroTouchEssentials
 }
 ```
 
-![](../.gitbook/assets/defaultval.jpg)
+![](<../.gitbook/assets/defaultval (6).jpg>)
 
 > 1. The default value will show up when hovering over the node input port
 
@@ -76,7 +76,7 @@ namespace ZeroTouchEssentials
 
 A node that returns multiple outputs.
 
-![](../.gitbook/assets/multipleoutputs.png)
+![](<../.gitbook/assets/multipleoutputs (1).png>)
 
 > Notice that there are now two output ports named according to the strings we entered for the dictionary's keys.
 
@@ -90,7 +90,7 @@ It is best practice to add documentation to Dynamo nodes that describe the node'
   * For example: `/// <summary>...</summary>`
 * Enable XML documentation in Visual Studio by selecting `Project > Project Properties > Build` and checking `XML documentation file`
 
-![](<../.gitbook/assets/vs-xml (1).jpg>)
+![](../.gitbook/assets/vs-xml.jpg)
 
 > Visual Studio will generate an XML file at the specified location
 
@@ -246,7 +246,7 @@ When publishing a newer version of a library, node names may change. Name change
 * Inside the migrations element, create `<priorNameHint>...</priorNameHint>` elements for each name change
 * For each name change, provide an `<oldName>...</oldName>` and `<newName>...</newName>` element
 
-![](../.gitbook/assets/vs-migrations-file.jpg)
+![](<../.gitbook/assets/vs-migrations-file (1).jpg>)
 
 > 1. Right-click and select `Add > New Item`
 > 2. Choose `XML File`

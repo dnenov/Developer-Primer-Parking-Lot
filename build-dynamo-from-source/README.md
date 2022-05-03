@@ -23,7 +23,7 @@ Before we can clone the repository, we need to install git. Follow this [short g
 
 We need a URL for the Dynamo repository to clone from. This can be found in the "Clone or download" button on the repository page. Copy the URL to paste into command prompt.
 
-![](../.gitbook/assets/github-clone.jpg)
+![](../.gitbook/assets/github-clone.png)
 
 > 1. Select "Clone or download"
 > 2. Copy the URL
@@ -44,7 +44,7 @@ In the next step we will run a git command to clone the Dynamo repository to the
 
 We know git is working if the cloning operation completed successfully. In the file explorer, navigate to the directory where you cloned to see the source files. the directory structure should look identical to the Dynamo repository's master branch on Github.
 
-![](../.gitbook/assets/source-files.jpg)
+![](<../.gitbook/assets/source-files (1).jpg>)
 
 > 1. Dynamo's source files
 > 2. Git files
@@ -61,7 +61,7 @@ With the source files now cloned to our local machine, we can build an executabl
 
 Once everything is finished installing, we can start Visual Studio and open the `Dynamo.All.sln` solution located in `Dynamo\src`.
 
-![](../.gitbook/assets/vs-open-dynamo.jpg)
+![](<../.gitbook/assets/vs-open-dynamo (2).jpg>)
 
 > 1. Select `File > Open > Project/Solution`
 > 2. Browse to the Dynamo repository and open the `src` folder
@@ -70,7 +70,7 @@ Once everything is finished installing, we can start Visual Studio and open the 
 
 Before we can build the solution, a few settings should be specified. We should first build a debug version of Dynamo so visual studio can gather more information while debugging to help us develop, and we want to target AnyCPU.
 
-![](../.gitbook/assets/vs-dynamo-build-settings.jpg)
+![](<../.gitbook/assets/vs-dynamo-build-settings (2).jpg>)
 
 > These will become folders inside the `bin` folder
 >
@@ -79,7 +79,7 @@ Before we can build the solution, a few settings should be specified. We should 
 
 With the project open, we can build the solution. This process will create a DynamoSandbox.exe file that we can run.
 
-![](../.gitbook/assets/vs-build-dynamo.jpg)
+![](<../.gitbook/assets/vs-build-dynamo (2).jpg>)
 
 > Building the project will restore NuGet dependencies.
 >
@@ -120,7 +120,7 @@ Starting Dynamo from Visual Studio rebuilds the solution for every debugging ses
 
 Alternatively, we may want to debug a Dynamo process that is already running to troubleshoot an issue with a specific graph open or package. For this purpose, we would open the project's source files in Visual Studio and attach to a running Dynamo process using the `Attach to Process` debug menu item.
 
-![](../.gitbook/assets/vs-attach-dynamosandbox.jpg)
+![](<../.gitbook/assets/vs-attach-dynamosandbox (3).jpg>)
 
 > Attach a running process to Visual Studio
 >
@@ -130,7 +130,7 @@ Alternatively, we may want to debug a Dynamo process that is already running to 
 
 In both situations we are attaching the debugger to a process we wish to debug. We can set break points in the code before or after starting the debugger that will cause the process to pause immediately before executing that line of code. If an uncaught exception is thrown while debugging, Visual Studio will jump to where it occurred in the source code. This is an efficient method for finding simple crashes, unhandled exceptions, and to understand the execution flow of an application.
 
-![](../.gitbook/assets/vs-debug-dynamocore.jpg)
+![](<../.gitbook/assets/vs-debug-dynamocore (1).jpg>)
 
 > While debugging DynamoSandbox, we set a breakpoint in the Color.ByARGB node's constructor that causes the Dynamo process to pause when the node is instantiated. If this node was throwing an exception or causing Dynamo to crash, we could step through each line in the constructor to find where the issue was occurring.
 >
@@ -153,7 +153,7 @@ Use the following command to pull the latest changes:
 
 `git pull origin master`
 
-![](../.gitbook/assets/cli-pull-changes.jpg)
+![](<../.gitbook/assets/cli-pull-changes (1).jpg>)
 
 > 1. Here we can see that the local repository has been updated with changes from the remote.
 

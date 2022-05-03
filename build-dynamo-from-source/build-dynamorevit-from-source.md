@@ -58,7 +58,7 @@ It is important to choose the correct branch of the repository to ensure that wh
 
 Before building the repository, we will need to restore the NuGet packages with the `restorepackages.bat` file located in the `src` folder. This bat file uses the [nuget](https://www.nuget.org) package manager to pull built binaries of dynamo core, which DynamoRevit needs. You might also choose to build these manually, but if you are only making changes to DynamoRevit and not Dynamo core. this makes getting started faster. Make sure to run this file as an admin.
 
-![](../.gitbook/assets/fe-restorepackages.jpg)
+![](<../.gitbook/assets/fe-restorepackages (2).jpg>)
 
 > 1. Right-click `restorepackages.bat` and select `Run as administrator`
 
@@ -135,7 +135,7 @@ The code should look like this:
 
 Now when we open Revit, there should be a Dynamo add-in located in the Manage tab.
 
-![](../.gitbook/assets/revit-dynamo.jpg)
+![](<../.gitbook/assets/revit-dynamo (1).jpg>)
 
 > 1. Select `Manage`
 > 2. Click the Dynamo add-in icon

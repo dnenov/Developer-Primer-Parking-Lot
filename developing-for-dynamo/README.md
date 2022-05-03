@@ -107,8 +107,4 @@ Be aware of .dll's included in a package being uploaded to the package manager. 
 
 If a package includes binaries, users must be prompted upon downloading that the package contains binaries.
 
-### results matching ""
-
 *
-
-### No results matching ""

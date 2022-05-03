@@ -8,9 +8,9 @@ Before jumping into development, it is important to build a strong foundation fo
 
 Visual Studio is a powerful IDE where we can create a project, add references, build `.dlls`, and debug. When creating a new project Visual Studio will also create a Solution, a structure for organizing projects. Multiple projects can exist inside a single solution and can be built together. To create a ZeroTouch node, we will need to start a new Visual Studio project in which we will write a C# class library and build a `.dll`.
 
-![](../.gitbook/assets/vs-new-project-1.jpg)
+![](<../.gitbook/assets/vs-new-project-1 (2).jpg>)
 
-![](../.gitbook/assets/vs-new-project-2.jpg)
+![](<../.gitbook/assets/vs-new-project-2 (2).jpg>)
 
 > The New Project window in Visual Studio
 >
@@ -35,7 +35,7 @@ Visual Studio will automatically create and open a C# file. We should give it an
  }
 ```
 
-![](../.gitbook/assets/vs-edit-class.jpg)
+![](<../.gitbook/assets/vs-edit-class (1).jpg>)
 
 > 1. Open the Solution Explorer and Output windows from `View`.
 > 2. Rename the `Class1.cs` file to `SampleFunctions.cs` in the Solution explorer on the right.
@@ -54,14 +54,14 @@ The next step is to build the project, but before doing that there are a few set
 
 Now we can build the project to create a `.dll`. To do this, either select `Build Solution` from the `Build` menu or use the short-cut `CTRL+SHIFT+B`.
 
-![](../.gitbook/assets/vs-build.jpg)
+![](<../.gitbook/assets/vs-build (1).jpg>)
 
 > 1. Select `Build > Build Solution`
 > 2. You can determine if your project built successfully by checking the Output window
 
 If the project has been built successfully there will be a `.dll` named `MyCustomNode` in the project's `bin` folder. For this example we left the project's file path as Visual Studio's default at `c:\users\username\documents\visual studio 2015\Projects`. Let's take a look at the project's file structure.
 
-![](../.gitbook/assets/folder-structure.jpg)
+![](<../.gitbook/assets/folder-structure (1).jpg>)
 
 > 1. The `bin` folder contains the `.dll` built from Visual Studio.
 > 2. The Visual Studio project file.
@@ -79,7 +79,7 @@ Now we can open Dynamo and import the `.dll`. With the Add feature, navigate to 
 
 If a category is created in the library called `MyCustomNode`, the .dll was imported successfully! However, Dynamo created two nodes from what we wanted to be a single node. In the next section we will explain why this happens and how Dynamo reads a .dll.
 
-![](../.gitbook/assets/dyn-customnode.jpg)
+![](<../.gitbook/assets/dyn-customnode (1).jpg>)
 
 > 1. MyCustomNode in the Dynamo Library. The Library category is determined by the `.dll` name.
 > 2. SampleFunctions.MultiplyByTwo on the canvas.
@@ -88,7 +88,7 @@ If a category is created in the library called `MyCustomNode`, the .dll was impo
 
 When Dynamo loads a .dll, it will expose all public static methods as nodes. Constructors, methods, and properties will be turned into Create, Action, and Query nodes respectively. In our multiplication example, the `MultiplyByTwo()` method becomes an Action node in Dynamo. This is because the node has been named based on its method and class.
 
-![](../.gitbook/assets/multiplybytwo.png)
+![](<../.gitbook/assets/multiplybytwo (1).png>)
 
 > 1. The input is named `inputNumber` based on the method's parameter name.
 > 2. The output is named `double` by default because that is the data type being returned.
@@ -115,7 +115,7 @@ namespace MyCustomNode
 }
 ```
 
-![](../.gitbook/assets/private-constructor.png.jpg)
+![](../.gitbook/assets/private-constructor.jpg)
 
 > 1. Dynamo has imported our method as a Create node
 
@@ -132,13 +132,13 @@ The multiplication node is very simple and no references to Dynamo are required.
 
 To reference these packages in a Visual Studio project, either download the package from NuGet at the links above and manually reference the .dlls or use the NuGet Package Manager in Visual Studio. First we can walk through how to install them with NuGet in Visual Studio.
 
-![](../.gitbook/assets/vs-nuget-package-manager2.jpg)
+![](<../.gitbook/assets/vs-nuget-package-manager2 (1).jpg>)
 
 > 1. Open the NuGet package manager by selecting `Tools > NuGet Package Manager > Manage NuGet Packages for Solution...`
 
 This is the NuGet Package Manager. This window shows what packages have been installed for the project and lets the user browse for others. If a new version of the DynamoServices package is released, packages can be updated from here or reverted to an earlier version.
 
-![](../.gitbook/assets/vs-nuget-package-manager.jpg)
+![](<../.gitbook/assets/vs-nuget-package-manager (1).jpg>)
 
 > 1. Select browse and search for DynamoVisualProgramming to bring up the Dynamo Packages.
 > 2. The Dynamo packages. Selecting one will show it's current version and description of what's inside.
@@ -153,8 +153,4 @@ To manually add a package downloaded from the browser, open the Reference Manage
 
 Now that Visual Studio is configured properly and we have successfully added a `.dll` to Dynamo, we have a solid foundation for the concepts going forward. This is only the beginning, so keep following along to learn more about how to create a custom node.
 
-### results matching ""
-
 *
-
-### No results matching ""

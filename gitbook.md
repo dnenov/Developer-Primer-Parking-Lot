@@ -1,4 +1,4 @@
-# GitBook
+# Examples
 
 If you are looking for examples on how to develop for Dynamo. Take a look at these resources below:
 
@@ -72,8 +72,4 @@ Third party developers have made significant and exciting contributions to the p
 
 [https://github.com/andydandy74/ClockworkForDynamo](https://github.com/andydandy74/ClockworkForDynamo)
 
-### results matching ""
-
 *
-
-### No results matching ""

@@ -119,8 +119,4 @@ output1 = str(volume)
 output2 = str(centroid)
 ```
 
-### results matching ""
-
 *
-
-### No results matching ""

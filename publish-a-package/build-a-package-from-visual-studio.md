@@ -29,7 +29,7 @@ CustomNodeModel
 > > CustomNodeModel.sln
 {% endhint %}
 
-![](../.gitbook/assets/fe-proj-directory.jpg)
+![](<../.gitbook/assets/fe-proj-directory (1).jpg>)
 
 > 1. Move the project files into the new `src` folder
 
@@ -52,7 +52,7 @@ Now that the source files are in a separate folder, add a `AfterBuild` target to
   </Target>
 ```
 
-![](../.gitbook/assets/atom-afterbuild.jpg)
+![](<../.gitbook/assets/atom-afterbuild (1).jpg>)
 
 > We will need to make sure that the target has been added to the `CustomNodeModel.csproj` file (not another project file) and that the project does not have any existing Post-Build settings.
 >
@@ -80,7 +80,7 @@ Dynamo packages typically have a `dyf` and `extra` folder for Dynamo Custom Node
 
 If you build the project, the project folder should now have a `packages` folder alongside the `src` folder previously created. Inside the `packages` directory is a folder containing everything needed for the package. We also need to copy the `pkg.json` file into the package folder so that Dynamo knows to load the package.
 
-![](../.gitbook/assets/fe-proj-directory-package.jpg)
+![](<../.gitbook/assets/fe-proj-directory-package (3).jpg>)
 
 > 1. The new packages folder that the AfterBuild target created
 > 2. The existing src folder with the project
@@ -89,8 +89,4 @@ If you build the project, the project folder should now have a `packages` folder
 
 Now you can publish the package using Dynamo's package manager or directly copy it into Dynamo's package directory: `<user>\AppData\Roaming\Dynamo\1.3\packages`.
 
-### results matching ""
-
 *
-
-### No results matching ""

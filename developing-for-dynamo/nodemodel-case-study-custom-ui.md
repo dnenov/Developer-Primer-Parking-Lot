@@ -33,7 +33,7 @@ A NodeModel node can only call functions, so we need to separate the NodeModel a
 
 Create two C# class library projects in the solution: one for functions and one to implement the NodeModel interface.
 
-![](../.gitbook/assets/vs-new-class-projects.jpg)
+![](<../.gitbook/assets/vs-new-class-projects (1).jpg>)
 
 > 1. Right-click on the Solution and select `Add > New Project`
 > 2. Choose Class Library
@@ -43,7 +43,7 @@ Create two C# class library projects in the solution: one for functions and one 
 
 Next, we need to rename the class libraries that were automatically created and add one to the `CustomNodeModel` project. The class `GridNodeModel` implements the abstract NodeModel class, `GridNodeView` is used to customize the view, and `GridFunction` contains any functions we need to call.
 
-![](../.gitbook/assets/vs-new-class.jpg)
+![](<../.gitbook/assets/vs-new-class (1).jpg>)
 
 > 1. Add another class by right-clicking on the `CustomNodeModel` project, selecting `Add > New Item...` and choose `Class`.
 > 2. In the `CustomNodeModel` project, we need `GridNodeModel.cs` and `GridNodeView.cs` class
@@ -199,7 +199,7 @@ This function class is very similar to the Zero-Touch Grid case study with one d
 
 Just as we added references for NuGet packages, `CustomNodeModel` will need to reference `CustomNodeModelFunction` to call the function.
 
-![](../.gitbook/assets/vs-add-project-reference.jpg)
+![](<../.gitbook/assets/vs-add-project-reference (1).jpg>)
 
 > The using statement for CustomNodeModel will be inactive until we reference the function
 >

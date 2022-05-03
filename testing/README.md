@@ -130,8 +130,4 @@ If we replace the `Assert` statement in the `FailingTest` with `Assert.NotNull(m
 
 Now we are set up to write tests for any package we create. For an extensive list of reference tests take a look at the [Dynamo source](https://github.com/DynamoDS/Dynamo/tree/master/test).
 
-### results matching ""
-
 *
-
-### No results matching ""

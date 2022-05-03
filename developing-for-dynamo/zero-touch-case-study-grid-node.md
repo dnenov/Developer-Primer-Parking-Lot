@@ -10,7 +10,7 @@ This example will touch on a few of the features and concepts to be aware of whe
 
 To start building the grid node, create a new Visual Studio class library project. Refer to the Getting Started page for an in-depth walk-through of how to set up a project.
 
-![](<../.gitbook/assets/vs-new-project-1 (3).jpg>)
+![](../.gitbook/assets/vs-new-project-1.jpg)
 
 ![](<../.gitbook/assets/vs-new-project-2 (1).jpg>)
 
@@ -19,7 +19,7 @@ To start building the grid node, create a new Visual Studio class library projec
 
 Since we will be creating geometry, we need to reference the appropriate NuGet package. Install the ZeroTouchLibrary package from the Nuget Package Manager. This package is necessary for the `using Autodesk.DesignScript.Geometry;` statement.
 
-![](../.gitbook/assets/vs-nugetpackage.jpg)
+![](<../.gitbook/assets/vs-nugetpackage (1).jpg>)
 
 > 1. Browse for the ZeroTouchLibrary package
 > 2. We will be using this node in the current build of Dynamo Studio, which is 1.3. Select the package version that matches this.
@@ -90,7 +90,7 @@ If the project looks similar to this, go ahead and try to build the `.dll`.
 
 Check the project's `bin` folder for a `.dll`. If the build was successful, we can add the `.dll` to Dynamo.
 
-![](../.gitbook/assets/RectangularGrid-Dynamo.jpg)
+![](<../.gitbook/assets/RectangularGrid-Dynamo (1).jpg>)
 
 > 1. The custom RectangularGrids node in the Dynamo Library
 > 2. The custom node on the canvas
@@ -100,7 +100,7 @@ Check the project's `bin` folder for a `.dll`. If the build was successful, we c
 
 In the example above, we created a fairly simple node that didn't define much else outside of the `RectangularGrids` method. However, we may want to create tooltips for input ports or give the node a summary like the standard Dynamo nodes. Adding these features to custom nodes makes them easier to use, especially if a user wants to search for them in the Library.
 
-![](../.gitbook/assets/nodemodification.png)
+![](<../.gitbook/assets/nodemodification (1).png>)
 
 > 1. A default input value
 > 2. A tool tip for the xCount input
@@ -161,8 +161,4 @@ To add tooltips, we need an xml file in the project directory. A `.xml` can be a
 
 That's it! We have created a new node with several standard features. The following chapter Zero-Touch Basics goes into greater detail about Zero-Touch node development and the issues to be aware of.
 
-### results matching ""
-
 *
-
-### No results matching ""

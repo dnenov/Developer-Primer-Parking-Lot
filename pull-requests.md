@@ -45,8 +45,4 @@ Once a pull request is submitted, you may need to stay involved during the revie
 
 Since there are multiple versions of Revit available on the market, you may be required to cherry-pick your changes into specific DynamoRevit Release branches so that different versions of Revit can pick up the new functionality. During the review process, contributors will be responsible for cherry-picking their reviewed commits to the other DynamoRevit branches as specified by the Dynamo team.
 
-### results matching ""
-
 *
-
-### No results matching ""
