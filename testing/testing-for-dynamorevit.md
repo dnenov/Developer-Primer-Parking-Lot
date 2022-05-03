@@ -8,7 +8,7 @@ The Revit Test Framework (RTF) allows for remote testing on Revit. RTF creates a
 
 The Revit Test Framework is open source and hosted on Github: [https://github.com/DynamoDS/RevitTestFramework](https://github.com/DynamoDS/RevitTestFramework)
 
-![](../.gitbook/assets/rft-github.jpg)
+![](<../.gitbook/assets/rft-github (2).jpg>)
 
 Using the same git commands from the walk-through in Build DynamoRevit From Source, we can clone and build the repository to run RTF. Open a new command prompt and enter the following commands:
 

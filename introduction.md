@@ -2,7 +2,7 @@
 
 Dynamo is a visual programming platform that enables designers to define the relationships and the sequences of actions that compose custom algorithms. Dynamo is an open-source project on Github, giving everyone an opportunity to contribute to its development.
 
-![A visual program in Dynamo](.gitbook/assets/01-ProgramFlow.png)
+![](.gitbook/assets/01-ProgramFlow.jpg)
 
 #### What is the purpose of this guide? <a href="#what-is-the-purpose-of-this-guide" id="what-is-the-purpose-of-this-guide"></a>
 

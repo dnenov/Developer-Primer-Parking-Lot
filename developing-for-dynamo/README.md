@@ -2,7 +2,7 @@
 
 Regardless of experience level, the Dynamo platform is designed for all users to be contributors. There are several development options that target different abilities and skill levels, each with its strengths and weaknesses depending on the goal. Below we will outline the different options and how to choose one over another.
 
-![](../.gitbook/assets/developing-for-dynamo.png)
+![](<../.gitbook/assets/developing-for-dynamo (1).png>)
 
 > Three development environments: Visual Studio, Python Editor, and Code Block DesignScript
 
@@ -54,7 +54,7 @@ Development options for Dynamo have been designed to address the complexity of a
 
 These are straightforward options for writing code in the Dynamo visual programming environment. The Dynamo visual programming workspace provides access to Python, DesignScript, and the ability to contain multiple nodes inside of a Custom Node.
 
-![](../.gitbook/assets/Development-Icons.png)
+![](<../.gitbook/assets/Development-Icons (1).png>)
 
 With these methods we can:
 
@@ -66,7 +66,7 @@ With these methods we can:
 
 Zero-Touch refers to a simple point-and-click method for importing C# libraries. Dynamo will read the public methods of a `.dll` and convert them to Dynamo nodes. You can use Zero-Touch to develop your own custom nodes and packages.
 
-![](../.gitbook/assets/ZTImport.png)
+![](<../.gitbook/assets/ZTImport (1).png>)
 
 With this method we can:
 

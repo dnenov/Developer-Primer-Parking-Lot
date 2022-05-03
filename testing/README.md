@@ -38,6 +38,8 @@ First we need to install the [NUnit 2 Test Adapter](https://marketplace.visualst
 
 In Visual Studio open the Dynamo solution file `Dynamo.All.sln` and the Test Explorer. Set the test settings to `x64` otherwise the tests will not run, then build the solution.
 
+![](../.gitbook/assets/vs-x64.jpg)
+
 > 1. Select `Test > Windows > TestExplorer` to show the tests
 > 2. The TestExplorer window
 > 3. Select `Test > Test Settings > Default Processor Architecture > X64`
@@ -55,6 +57,8 @@ Select a test to run. The `CanSaveImage()` test from `DynamoCoreWpfTests` will t
 Most tests we create for packages will be unit tests. They should be small, fast, and reliable. If we want to test a Zero-Touch node, the test should test only that DLL and make calls directly to that code. We will walk through how to set up a package with tests using the the DynamoSamples repository.
 
 Start by downloading the Github repository for [DynamoSamples](https://github.com/DynamoDS/DynamoSamples) and opening the Visual Studio solution file. We also need to add the Tests package with the NuGet package manager.
+
+![](<../.gitbook/assets/vs-install-testing-package (1).jpg>)
 
 > 1. The Tests package
 > 2. Install for the `SampleLibraryTests` project
@@ -75,6 +79,8 @@ To run tests we need to point the test libraries to Dynamo's installation direct
 ```
 
 Now build the solution to get the tests. If we open the `Test Explorer` window there should be three tests from the `SampleLibraryTests` project. Tests should be contained in a separate project. If we wanted to test a method in this project, we would need to reference that library in the test project.
+
+![](../.gitbook/assets/vs-tests.jpg)
 
 > 1. Build the solution to get the tests with `Build > Build Solution`
 > 2. A separate `SampleLibraryTests` project
@@ -123,6 +129,8 @@ namespace SampleLibraryTests
 > `public void FailingTest()` tests if Dynamo will throw an exception when the `Line.ByStartPointEndPoint(p1,p2)` method is given identical points, which is impossible to create a line from.
 
 If we replace the `Assert` statement in the `FailingTest` with `Assert.NotNull(myObject);`, we are testing if `Line.ByStartPointEndPoint(p1,p2)` can create a line from points in at identical locations. Replace the code and run the test to see what a failure looks like.
+
+![](../.gitbook/assets/vs-test-fail.jpg)
 
 > 1. The `Assert` statement we modified
 > 2. The failed `FailingTest`. Normally this is testing if the node can fail by throwing an exception.
