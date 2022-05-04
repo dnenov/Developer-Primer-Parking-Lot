@@ -47,6 +47,8 @@ In Visual Studio open the Dynamo solution file `Dynamo.All.sln` and the Test Exp
 
 Select a test to run. The `CanSaveImage()` test from `DynamoCoreWpfTests` will test Dynamo for whether or not it can save an image. Running the test will open Dynamo, add a node, and capture an image all very quickly.
 
+![](../.gitbook/assets/vs-run-test.jpg)
+
 > 1. Search for `CanSaveImage`
 > 2. Right-click on the test and select `Run Selected Tests`. If the test runs successfully it will be under the `Passed Test` category.
 > 3. Time elapsed for the test

@@ -47,6 +47,8 @@ After publishing a package, the nodes will be available in the Dynamo Library un
 
 Once the package is ready to publish online, open the Package Manager and choose `Publish` and then `Publish Online`.
 
+![](../.gitbook/assets/dyn-publish-package-directory.jpg)
+
 > 1. To see how Dynamo has formatted the package, click on the three vertical dots to the right of "CustomNodeModel" and choose "Show Root Directory"
 > 2. Select `Publish` then `Publish Online` in the "Publish a Dynamo Package" window.
 > 3. To uninstall a package, select `Uninstall...`.
