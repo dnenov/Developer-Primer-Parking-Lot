@@ -23,8 +23,6 @@ Before we can clone the repository, we need to install git. Follow this [short g
 
 We need a URL for the Dynamo repository to clone from. This can be found in the "Clone or download" button on the repository page. Copy the URL to paste into command prompt.
 
-![](../.gitbook/assets/github-clone.jpg)
-
 ![](<../.gitbook/assets/github-clone (2).png>)
 
 > 1. Select "Clone or download"
