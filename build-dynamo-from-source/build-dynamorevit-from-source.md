@@ -7,17 +7,17 @@ The DynamoRevit source files are also hosted on the DynamoDS Github for develope
 
 For this guide we will use the following:
 
-* Revit 2018
-* The latest DynamoRevit build on branch `Revit2018`
+* Revit 2023
+* The latest DynamoRevit build on branch `Revit2023`
 * The latest Dynamo build
 
 To ensure a successful build we will clone and build both the Dynamo and DynamoRevit repositories to use in this walk-through.
 
-_Note: building Dynamo manually before DynamoRevit is only required if you are building Dynamo 1.x and DynamoRevit 1.x - newer versions of the DynamoRevit repository rely on the nuget package manager for the Dynamo dependencies required to build. While a build of DynamoRevit 2.x does not require pulling Dynamo manually you'll still need the core dlls somewhere else to actually run the DynamoRevit addin - so it's worth pulling and building Dynamo anyway. See more below:_ [_Building the repository using Visual Studio_](broken-reference/)
+_Note: building Dynamo manually before DynamoRevit is only required if you are building Dynamo 1.x and DynamoRevit 1.x - newer versions of the DynamoRevit repository rely on the NuGet package manager for the Dynamo dependencies required to build. While a build of DynamoRevit 2.x does not require pulling Dynamo manually you'll still need the core `dlls`somewhere else to actually run the DynamoRevit `addin`- so it's worth pulling and building Dynamo anyway. See more below:_ [_Building the repository using Visual Studio_](build-dynamorevit-from-source.md#building-dynamo-revit)
 
 #### Locating the DynamoRevit repository on Github <a href="#locating-the-dynamorevit-repository-on-github" id="locating-the-dynamorevit-repository-on-github"></a>
 
-The code for the DynamoRevit project lives in a separate repository on Github from the core Dynamo source code. This repo contains the the source files for Revit-specific nodes and the Revit addin which loads Dynamo. Builds of DynamoRevit for different versions of Revit (2016, 2017, or 2018, for example) are organized as branches in the repository.
+The code for the DynamoRevit project lives in a separate repository on Github from the core Dynamo source code. This repo contains the source files for Revit-specific nodes and the Revit `addin` which loads Dynamo. Builds of DynamoRevit for different versions of Revit (2016, 2017, or 2018, for example) are organized as branches in the repository.
 
 DynamoRevit's source is hosted here: [https://github.com/DynamoDS/DynamoRevit](https://github.com/DynamoDS/DynamoRevit)
 
@@ -42,13 +42,13 @@ We can now clone the repository into this directory. Though we will need to spec
 
 ![](../.gitbook/assets/cli-clone-revit.jpg)
 
-Once the repository has finished cloning, change the current directory to the repository folder and switch to the branch that matches the installed version of Revit. For this example, we are using Revit 2018. All remote branches can be viewed on the Github page in the Branch drop-down menu.
+Once the repository has finished cloning, change the current directory to the repository folder and switch to the branch that matches the installed version of Revit. For this example, we are using RC2.13.1\_Revit2023. All remote branches can be viewed on the Github page in the Branch drop-down menu.
 
 `cd C:\Users\username\Documents\GitHub\DynamoRevit` changes the directory to DynamoRevit.\
-`git checkout Revit2018` sets the current branch to `Revit2018`.\
+`git checkout RC2.13.1_Revit2023` sets the current branch to `Revit2023`.\
 `git branch` verifies which branch we are on and shows the others that exist locally.
 
-![](<../.gitbook/assets/cli-branch-revit (1).jpg>)
+![](../.gitbook/assets/cli-branch-revit.jpg)
 
 > The branch with an asterisk is the one currently checked out. The `Revit2017` branch is showing because we previously checked it out, so it exists locally.
 
@@ -68,7 +68,7 @@ If the packages are successfully restored, a `packages` folder will be added to 
 
 > 1. The latest beta Dynamo NuGet packages
 
-With the packages restored, open the `Dynamo.Revit.2013.sln` Visual Studio solution file in `src` and build the solution. The build may initially have trouble finding `AssemblySharedInfo.cs`. If so, rerunning the build will resolve this issue.
+With the packages restored, open the`DynamoRevit.All.sln` Visual Studio solution file in `src` and build the solution. The build may initially have trouble finding `AssemblySharedInfo.cs`. If so, rerunning the build will resolve this issue.
 
 ![](../.gitbook/assets/vs-build-dynamorevit.jpg)
 
@@ -79,14 +79,14 @@ With the packages restored, open the `Dynamo.Revit.2013.sln` Visual Studio solut
 
 Revit requires an add-in file to recognize DynamoRevit, something the [installer](http://dynamobim.org/download/) would create automatically. In development we need to manually create an add-in file that points to the build of DynamoRevit we want to use, specifically the `DynamoRevitDS.dll` assembly. We also need to point DynamoRevit to a build of Dynamo.
 
-Create a `Dynamo.addin` file in Revit's add-in folder located in `C:\ProgramData\Autodesk\Revit\Addins\2018`. We already had a version of DynamoRevit installed, so we will just edit the existing file to point to the new build.
+Create a `DynamoRevit.addin` file in Revit's add-in folder located in `C:\ProgramData\Autodesk\Revit\Addins\2023`. We already had a version of DynamoRevit installed, so we will just edit the existing file to point to the new build.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <RevitAddIns>
 <AddIn Type="Application">
 <Name>Dynamo For Revit</Name>
-<Assembly>"C:\Users\username\Documents\GitHub\DynamoRevit\bin\AnyCPU\Debug\Revit_2018\DynamoRevitDS.dll"</Assembly>
+<Assembly>"C:\Users\username\Documents\GitHub\DynamoRevit\bin\AnyCPU\Debug\Revit\DynamoRevitDS.dll"</Assembly>
 <AddInId>8D83C886-B739-4ACD-A9DB-1BC78F315B2B</AddInId>
 <FullClassName>Dynamo.Applications.DynamoRevitApp</FullClassName>
 <VendorId>ADSK</VendorId>
@@ -104,7 +104,7 @@ Alternatively, we can have the add-in load the version selector instead of a spe
 <RevitAddIns>
 <AddIn Type="Application">
 <Name>Dynamo For Revit</Name>
-<Assembly>"C:\Users\username\Documents\GitHub\DynamoRevit\bin\AnyCPU\Debug\Revit_2018\DynamoRevitVersionSelector.dll"</Assembly>
+<Assembly>"C:\Users\username\Documents\GitHub\DynamoRevit\bin\AnyCPU\Debug\Revit\DynamoRevitVersionSelector.dll"</Assembly>
 <AddInId>8D83C886-B739-4ACD-A9DB-1BC78F315B2B</AddInId>
 <FullClassName>Dynamo.Applications.VersionLoader</FullClassName>
 <VendorId>ADSK</VendorId>
@@ -115,6 +115,10 @@ Alternatively, we can have the add-in load the version selector instead of a spe
 
 * Set the `<Assembly>...</Assembly>` file path to `DynamoRevitVersionSelector.dll`
 * `<FullClassName>...</FullClassName>` specifies what class to instantiate from the assembly which we pointed to with the assembly element path above. This class will be the entry point for our addin.
+
+Additionally, we need to remove the existing Dynamo that ships with Revit. To do that, go to `C:\Program Files\Autodesk\Revit 2023\AddIns` and remove the two folders that contain **Dynamo** - `DynamoForRevit` and `DynamoPlayerForRevit`. You can either delete them or back them up in a separate folder if you need to recover the original Dynamo for Revit.
+
+![Folders to remove](../.gitbook/assets/fe-dynamo-folders-remove.jpg)
 
 The second step is to add a file path for the Dynamo core assemblies to the `Dynamo.config` file in DynamoRevit's `bin` folder. DynamoRevit will load these when the add-in is opened in Revit. This config file lets you point your DynamoRevit addin to different versions of the dynamo core for developing and testing changes in both core and DynamoRevit.
 
@@ -145,10 +149,10 @@ If an error dialog window appears showing missing assemblies, it is likely that 
 
 #### Debugging DynamoRevit using Visual Studio <a href="#debugging-dynamorevit-using-visual-studio" id="debugging-dynamorevit-using-visual-studio"></a>
 
-In the previous section, **Build Dynamo from Source**, we briefly introduced debugging in Visual Studio and how to attach visual studio to a process. Using an exception in the Wall.ByCurveAndHeight node as an example, we will walk through how to attach to a process, set break points, step through code, and use the call stack to determine the exception's source. These debugging tools apply generally to .net development workflows, and are worth exploring outside of this guide.
+In the previous section, [**Build Dynamo from Source**](./), we briefly introduced debugging in Visual Studio and how to attach visual studio to a process. Using an exception in the Wall.ByCurveAndHeight node as an example, we will walk through how to attach to a process, set breakpoints, step through code, and use the call stack to determine the exception's source. These debugging tools apply generally to .net development workflows and are worth exploring outside of this guide.
 
 * **Attach to process** links a running application to Visual Studio for debugging. If we want to debug behavior occurring in a build of DynamoRevit, we can open the DynamoRevit source files in Visual Studio and attach the `Revit.exe` process, which is the parent process of the DynamoRevit addin. Visual Studio uses a [symbol file](https://msdn.microsoft.com/en-us/library/ms241613.aspx) (`.pbd`) to make the connection between the assemblies DynamoRevit is executing and the source code.
-* **Break points** establish lines in the source code where the application will pause before executing. If a node is causing DynamoRevit to crash or return an unexpected result, we can add a break point to the node's source to pause the process, step into the code, and inspect live values of variables until we find the root of the problem
+* **Break points** establish lines in the source code where the application will pause before executing. If a node is causing DynamoRevit to crash or return an unexpected result, we can add a breakpoint to the node's source to pause the process, step into the code, and inspect live values of variables until we find the root of the problem
 * **Stepping through code** walks through the source line by line. We can run functions one by one, step into a function call, or jump out of the function we're currently executing.
 *   **The Call stack** shows the function that a process is currently running relative to the previous function calls which invoked this function call. Visual Studio has a Call Stack window to display this. For example, if we reach an exception outside of the source code, we can see the path to the calling code in the call stack.
 
@@ -156,9 +160,13 @@ In the previous section, **Build Dynamo from Source**, we briefly introduced deb
 
 The **Wall.ByCurveAndHeight** node throws an exception when given a PolyCurve as its curve input with the message: _"To BSPlineCurve Not Implemented"_. With debugging we can figure out why exactly the node won't accept this geometry type as an input for the curve parameter. For this example, we are assuming that DynamoRevit has been successfully built and can be run as an add-in for Revit.
 
+![](../.gitbook/assets/dyn-wallbycurveandheight.jpg)
+
 > 1. The Wall.ByCurveAndHeight node throwing an exception
 
-Start by opening the `DynamoRevit.2013.sln` solution file, start Revit, and start the DynamoRevit add-in. Then attach Visual Studio to the Revit process with the `Attach to Process` window.
+Start by opening the `DynamoRevit.All.sln` solution file, start Revit, and start the DynamoRevit add-in (from Manager/Dynamo). Then attach Visual Studio to the Revit process with the `Attach to Process` window.
+
+![](../.gitbook/assets/vs-debug-attachprocess.jpg)
 
 > Revit and DynamoRevit need to be running to show as an available process
 >
@@ -167,29 +175,37 @@ Start by opening the `DynamoRevit.2013.sln` solution file, start Revit, and star
 > 3. Select `Revit.exe`
 > 4. Select `Attach`
 
-With Visual Studio attached to Revit, open the Wall.ByCurveAndHeight source code in `Wall.cs`. We can find this in the Solution Explorer under `Libraries > RevitNodes > Elements` in the `Public static constructors` region of the file. Set a break point in the constructor of the wall type so that when node is executed in Dynamo, the process will break and we can step through each line of code individually. Usually Dynamo zero touch type constructors start with `By<parameters>`.
+With Visual Studio attached to Revit, open the Wall.ByCurveAndHeight source code in `Wall.cs`. We can find this in the Solution Explorer under `Libraries > RevitNodes > Elements` in the `Public static constructors` region of the file. Set a breakpoint in the constructor of the wall type so that when node is executed in Dynamo, the process will break and we can step through each line of code individually. Usually Dynamo zero touch type constructors start with `By<parameters>`.
+
+![](../.gitbook/assets/vs-debugging-breakpoint.jpg)
 
 > 1. The class file with the constructor for Wall.ByCurveAndHeight
 > 2. Set a breakpoint by either clicking left of the line number or right-clicking on the line of code and select `Breakpoint > Insert Breakpoint`.
 
 With the breakpoint set, we need the process to run through the Wall.ByCurveAndHeight function. The function can be executed again in Dynamo by reconnecting a wire to one of its ports, which will force the node to re-execute. The breakpoint will be hit in Visual Studio.
 
+![](../.gitbook/assets/vs-breakpoint.jpg)
+
 > 1. The breakpoint icon changes when it is hit
 > 2. The Call Stack window showing the method that is up next
 
 Now step over each line in the constructor until we hit the exception. Code highlighted in yellow is the next statement to be run.
 
+![](../.gitbook/assets/vs-stepover.jpg)
+
 > 1. The debugging tools for navigating code
 > 2. Press `Step Over` to run the highlighted code then suspend execution after the function returns
 > 3. The next statement to run indicated by the yellow highlight and arrow
 
-If we keep stepping through the function, we will hit the exception that displayed in the DynamoRevit window. Looking at the Call Stack window, we can see that the exception is coming from the `Autodesk.LibG.PolyCurve.to_nurbs_curve()` method in `LibG.Managed.dll`. Thankfully the exception is handled here so Dynamo did not crash. The debugging process has provided context for the issue by bringing us to another method in the source code.
+If we keep stepping through the function, we will hit the exception that displayed in the DynamoRevit window. Looking at the Call Stack window, we can see that the exception was originally thrown from a method called `Autodesk.Revit.CurveAPIUtils.CreateNurbsCurve`. Thankfully the exception is handled here so Dynamo did not crash. The debugging process has provided context for the issue by bringing us to another method in the source code.
 
-`LibG.managed.dll` is not an open source library so we cannot make changes there - now that we have more information we can report the issue with more context by filing a github [issue](https://guides.github.com/features/issues/) or we could propose a workaround for this issue making a pull request.
+Since thisis not an open source library we cannot make changes there - now that we have more information we can report the issue with more context by filing a github [issue](https://guides.github.com/features/issues/) or we could propose a workaround for this issue making a pull request.
+
+![](../.gitbook/assets/vs-exception.jpg)
 
 > 1. When we hit the statement causing the exception in `Walls.cs`, the debugging process brings us as close as it could to the root of the issue in the user code inside `ProtoToRevitCurve.cs`
 > 2. The statement causing the exception in `ProtoToRevitCurve.cs`
-> 3. In the Call Stack, we can see that the exception is coming from non-user code in `LibG.Managed.dll`
+> 3. In the Call Stack, we can see that the exception is coming from non-user code
 > 4. A pop-up window giving us information about the exception
 
 This process can be applied to any source files we are working with. If we are developing a library of Zero-Touch nodes for Dynamo Studio, we can open the library's source and attach a Dynamo process to debug the node library. Even if everything is functioning perfectly, debugging is a great way to explore code and find out how things are working.
@@ -199,13 +215,13 @@ This process can be applied to any source files we are working with. If we are d
 This process is nearly identical to pulling changes for Dynamo, except that we will need to ensure that we are on the correct branch. Use the `git branch` command in the DynamoRevit repository to see which branches are available locally and which are currently checked out.
 
 `cd C:\Users\username\Documents\GitHub\DynamoRevit` sets the current directory to the DynamoRevit repository.\
-`git branch` verifies we are on the correct branch, `Revit2017`.\
-`git pull origin Revit2017` pulls changes from the remote origin `Revit2017` branch.
+`git branch` verifies we are on the correct branch, `RC2.13.1_Revit2023`.\
+`git pull origin RC2.13.1_Revit2023` pulls changes from the remote origin `RC2.13.1_Revit2023` branch.
 
 Origin simply points to the original url we cloned.
 
 ![](../.gitbook/assets/cli-pull-revit.jpg)
 
-> We want to be mindful here of which branch we are currently on and which one we are pulling from to avoid pulling changes from `Revit2018` into `Revit2017` for example.
+> We want to be mindful here of which branch we are currently on and which one we are pulling from to avoid pulling changes from `RC2.13.1_Revit2023` into `Revit2018` for example.
 
 As mentioned in **Build Dynamo from Source**, when we are ready to submit a change to the DynamoRevit repository we can create a pull request following the Dynamo team's guidelines laid out in the Pull Requests section.
