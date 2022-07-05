@@ -56,7 +56,7 @@ Select a test to run. The `CanSaveImage()` test from `DynamoCoreWpfTests` will t
 
 #### How to write tests for a package <a href="#how-to-write-tests-for-a-package" id="how-to-write-tests-for-a-package"></a>
 
-Most tests we create for packages will be unit tests. They should be small, fast, and reliable. If we want to test a Zero-Touch node, the test should test only that DLL and make calls directly to that code. We will walk through how to set up a package with tests using the the DynamoSamples repository.
+Most tests we create for packages will be unit tests. They should be small, fast, and reliable. If we want to test a Zero-Touch node, the test should test only that DLL and make calls directly to that code. We will walk through how to set up a package with tests using the DynamoSamples repository.
 
 Start by downloading the Github repository for [DynamoSamples](https://github.com/DynamoDS/DynamoSamples) and opening the Visual Studio solution file. We also need to add the Tests package with the NuGet package manager.
 
