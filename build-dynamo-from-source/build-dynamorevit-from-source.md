@@ -50,7 +50,7 @@ Once the repository has finished cloning, change the current directory to the re
 
 ![](../.gitbook/assets/cli-branch-revit.jpg)
 
-> The branch with an asterisk is the one currently checked out. The `Revit2017` branch is showing because we previously checked it out, so it exists locally.
+> The branch with an asterisk is the one currently checked out. The `Revit2018` branch is showing because we previously checked it out, so it exists locally.
 
 It is important to choose the correct branch of the repository to ensure that when the project builds in Visual Studio it will reference assemblies in the correct version of Revit's installation directory, specifically `RevitAPI.dll` and `RevitAPIUI.dll`.
 
