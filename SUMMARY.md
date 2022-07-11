@@ -12,8 +12,6 @@
   * [NodeModel Case Study - Custom UI](developing-for-dynamo/nodemodel-case-study-custom-ui.md)
   * [Updating your Packages and Dynamo libraries for Dynamo 2.x.](developing-for-dynamo/updating-your-packages-and-dynamo-libraries-for-dynamo-2.x..md)
   * [Extensions](developing-for-dynamo/extensions.md)
-* [Testing](testing/README.md)
-  * [Testing for DynamoRevit](testing/testing-for-dynamorevit.md)
 * [Publish a Package](publish-a-package/README.md)
   * [Build a Package From Visual Studio](publish-a-package/build-a-package-from-visual-studio.md)
   * [Extensions as Packages](publish-a-package/extensions-as-packages.md)
